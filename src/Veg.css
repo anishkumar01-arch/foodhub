@@ -1,0 +1,403 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.veg-page {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #24352a;
+  background: #ffffff;
+}
+
+/* Navbar */
+
+.veg-navbar {
+  height: 80px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.veg-logo {
+  font-size: 27px;
+  font-weight: 800;
+  color: #183c27;
+}
+
+.veg-logo span,
+.veg-footer span {
+  color: #62a84f;
+}
+
+.veg-nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.veg-nav-links a {
+  text-decoration: none;
+  color: #37483b;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.veg-nav-links a:hover {
+  color: #65a94f;
+}
+
+.veg-order-btn,
+.veg-explore-btn {
+  background: #438b43;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.veg-order-btn:hover,
+.veg-explore-btn:hover {
+  background: #286c31;
+  transform: translateY(-2px);
+}
+
+/* Hero */
+
+.veg-hero {
+  min-height: 520px;
+  padding: 65px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  background: #f3f8ef;
+}
+
+.veg-hero-content {
+  flex: 1;
+}
+
+.veg-tag {
+  color: #4c9748;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.veg-hero h1 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.2;
+  color: #1c3827;
+  font-weight: 800;
+}
+
+.veg-hero h1 span {
+  display: block;
+  color: #65a84d;
+}
+
+.veg-description {
+  max-width: 470px;
+  color: #6a776c;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 22px 0 30px;
+}
+
+.veg-hero-image {
+  flex: 1;
+}
+
+.veg-hero-image img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* Categories */
+
+.veg-categories {
+  padding: 75px 8%;
+  text-align: center;
+}
+
+.veg-categories h2,
+.veg-section-heading h2 {
+  font-size: 32px;
+  color: #203b29;
+  font-weight: 750;
+}
+
+.veg-categories > p,
+.veg-section-heading p {
+  color: #89938b;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.veg-category-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.veg-category {
+  padding: 25px 10px;
+  border: 1px solid #edf1eb;
+  border-radius: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.veg-category:hover {
+  transform: translateY(-7px);
+  background: #f2f8ef;
+  border-color: #a9d49c;
+}
+
+.veg-category span {
+  font-size: 38px;
+}
+
+.veg-category h3 {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #344c39;
+}
+
+/* Food Menu */
+
+.veg-menu {
+  background: #f8faf6;
+  padding: 75px 8%;
+}
+
+.veg-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.veg-menu-label {
+  color: #4d9547;
+  background: #e9f5e5;
+  padding: 10px 17px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.veg-food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.veg-food-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.veg-food-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.veg-food-image {
+  height: 220px;
+  position: relative;
+  overflow: hidden;
+}
+
+.veg-food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.veg-food-card:hover img {
+  transform: scale(1.07);
+}
+
+.veg-rating {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: white;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.veg-food-details {
+  padding: 20px;
+}
+
+.veg-food-category {
+  font-size: 12px;
+  color: #65a84d;
+  font-weight: 600;
+}
+
+.veg-food-details h3 {
+  font-size: 18px;
+  margin-top: 8px;
+  color: #253b2b;
+}
+
+.veg-food-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.veg-food-bottom h4 {
+  color: #438b43;
+  font-size: 21px;
+}
+
+.veg-add-btn {
+  background: #438b43;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.veg-add-btn:hover {
+  background: #286c31;
+}
+
+/* About */
+
+.veg-about {
+  text-align: center;
+  padding: 75px 10%;
+  background: #eaf4e5;
+}
+
+.veg-about h2 {
+  font-size: 32px;
+  color: #25472d;
+}
+
+.veg-about p {
+  max-width: 650px;
+  margin: 18px auto 0;
+  color: #667b68;
+  line-height: 1.9;
+}
+
+/* Footer */
+
+.veg-footer {
+  background: #183c27;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.veg-footer h2 {
+  font-size: 27px;
+}
+
+.veg-footer p {
+  margin-top: 12px;
+  color: #c4d3c5;
+  font-size: 13px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+  .veg-category-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .veg-food-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .veg-hero {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .veg-navbar {
+    height: auto;
+    padding: 18px 5%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .veg-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .veg-order-btn {
+    padding: 10px 15px;
+  }
+
+  .veg-hero {
+    flex-direction: column;
+    padding: 50px 6%;
+  }
+
+  .veg-hero-image img {
+    height: 260px;
+  }
+
+  .veg-category-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .veg-food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .veg-section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .veg-categories,
+  .veg-menu {
+    padding: 50px 6%;
+  }
+}
